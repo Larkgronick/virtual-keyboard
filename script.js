@@ -212,9 +212,18 @@ buttons.forEach((button, index) => {
                     textarea.value = textarea.value.slice(0, inputWindow.selectionStart) + '\n' + textarea.value.slice(inputWindow.selectionEnd, textarea.value.length);
                     setCaretPosition(textarea, position);
                 }
-
-            } else if(button.innerHTML == 'Alt' || button.innerHTML == 'Ctrl' || button.innerHTML == 'Win' || button.innerHTML == 'Alt'){
-                textarea.value = textarea.value.slice(0, position) + '' + textarea.value.slice(position, textarea.value.length) ; 
+            
+            } else if(button.innerHTML == ' '){
+                if(inputWindow.selectionEnd == position){
+                    textarea.value = textarea.value.slice(0, position) + ' ' + textarea.value.slice(position, textarea.value.length); 
+                    setCaretPosition(textarea, position+1);
+                }else{
+                    textarea.value = textarea.value.slice(0, inputWindow.selectionStart) + ' ' + textarea.value.slice(inputWindow.selectionEnd, textarea.value.length);
+                    setCaretPosition(textarea, position+1);
+                }
+               
+            } else if(button.innerHTML == 'Alt' || button.innerHTML == 'Ctrl' || button.innerHTML == 'Win'){
+                textarea.value = textarea.value.slice(0, position) + '' + textarea.value.slice(position, textarea.value.length); 
             
             } else if(button.innerHTML =='⇑Shift' || button.innerHTML =='⇑'){
             if(buttons[0].innerHTML == '`'){
@@ -244,8 +253,7 @@ buttons.forEach((button, index) => {
                 item.innerHTML = russianLowerCase[index];
                 })
             }
-
-        }else if(button.innerHTML =='Tab⇄'){
+        } else if(button.innerHTML =='Tab⇄'){
             textarea.value += '  ';
 
         }else if(button.innerHTML =='&lt;'){
