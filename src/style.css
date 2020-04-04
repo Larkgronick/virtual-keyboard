@@ -1,12 +1,12 @@
 @font-face {
-    font-family: B52; 
-    src: url(src/b52.ttf); 
+    font-family: 'B52'; 
+    src: url(../fonts/b52.ttf);
 
    }
 
 @font-face {
-    font-family: PoplarKozel; 
-    src: url(src/PoplarKozel.otf);
+    font-family: 'PoplarKozel'; 
+    src: url(../fonts/PoplarKozel.otf);
 
 }
 
