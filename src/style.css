@@ -51,12 +51,16 @@ button{
 
 }
 
-button:hover {background-color: #323332}
+button:hover {
+    background-color: #323332
+
+}
 
 button:active {
-  border-radius: 10px;
-  box-shadow: 0 5px #999;
-  transform: translateY(4px);
+    border-radius: 10px;
+    box-shadow: 0 5px #999;
+    transform: translateY(4px);
+    
 }
 
 .active{
@@ -95,4 +99,9 @@ button:active {
 #spacebar{
     width: 230px;
 
+}
+
+div{
+    font-family: PoplarKozel;
+    margin-top: 20px;
 }
