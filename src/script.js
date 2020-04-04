@@ -141,8 +141,6 @@ document.addEventListener('keyup', function(event) {
     });
 
 
-
-
 let lowerCase = ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "Backspace", "Tab⇄", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\", 'Del', 'CapsLock', "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "\'", 'Enter', "⇑Shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "🠥", "⇑", 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win','Ctrl' ,"🠤", "🠧", "🠦"];
 let shift = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "Backspace", "Tab⇄", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "{", "}", "|", 'Del', 'CapsLock', "A", "S", "D", "F", "G", "H", "J", "K", "L", ":", "\"", 'Enter', "⇑Shift", "Z", "X", "C", "V", "B", "N", "M", "<", ">", "?", "🠥", "⇑", 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win','Ctrl' ,"🠤", "🠧", "🠦"];
 let capslock = ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "Backspace", "Tab⇄", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\", 'Del', 'CapsLock', "A", "S", "D", "F", "G", "H", "J", "K", "L", ":", "\"", 'Enter', "⇑Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "🠥", "⇑", 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win','Ctrl' ,"🠤", "🠧", "🠦"];
@@ -288,7 +286,6 @@ document.addEventListener("keydown", (event) => {
                 item.innerHTML = lowerCase[index];
                 })
                 window.localStorage.setItem('layout', JSON.stringify(lowerCase));
-                JSON.parse(window.localStorage.getItem('layout'));
         }
         
     }
@@ -371,15 +368,4 @@ document.addEventListener("keyup", (event) => {
             })
     }
 
-
-
-
 });
-
-// inputWindow.value = localStorage.getItem('inputWindow');
-// inputWindow.oninput = () => {
-//   localStorage.setItem('inputWindow', inputWindow.value)
-// };
-
-
-
