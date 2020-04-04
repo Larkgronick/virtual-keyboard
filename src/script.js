@@ -68,6 +68,14 @@ fifthRow.forEach((el) => {
   sectionFive.appendChild(button);
 });
 
+/* add information below keyboard */
+const osInfo = document.createElement('div');
+document.body.appendChild(osInfo);
+osInfo.innerHTML = 'Клавиатура создана на ОС Windows';
+const layoutInfo = document.createElement('div');
+document.body.appendChild(layoutInfo);
+layoutInfo.innerHTML = 'Смена раскладки виртуальной клавиатуры производится нажатием клавиш AltLeft + ShiftLeft.';
+
 /* styling large buttons */
 sectionOne.lastChild.id = 'backspace';
 sectionTwo.firstChild.id = 'tab';
