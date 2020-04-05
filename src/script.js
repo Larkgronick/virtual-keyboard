@@ -154,8 +154,8 @@ const russianCapsLock = ['Ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
 const buttons = document.querySelectorAll('button');
 window.onload = function layoutLoad() {
   document.getElementById('inputWindow').focus(); /* set focus when page load */
-  const layout = JSON.parse(window.localStorage.getItem('layout'));
-  if (layout[15] === null || layout[15] === 'q') {
+  const layoutStatus = JSON.parse(window.localStorage.getItem('layout'));
+  if (layoutStatus[15] === null || layoutStatus[15] === 'q') {
     buttons.forEach((button, index) => {
       button.innerHTML = lowerCase[index];
     });
