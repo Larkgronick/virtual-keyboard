@@ -154,7 +154,7 @@ const russianCapsLock = ['Ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
 const buttons = document.querySelectorAll('button');
 window.onload = function layoutLoad() {
   document.getElementById('inputWindow').focus(); /* set focus when page load */
-  if (JSON.parse(window.localStorage.getItem('layout'))[15] === 'q') {
+  if (JSON.parse(window.localStorage.getItem('layout'))[15] === 'q' || JSON.parse(window.localStorage.getItem('layout'))[15] === null) {
     buttons.forEach((button, index) => {
       button.innerHTML = lowerCase[index];
     });
@@ -280,6 +280,10 @@ document.addEventListener('keydown', (event) => {
 
   if (event.code === 'Tab') {
     textarea.value += '  ';
+    event.preventDefault();
+  }
+  if (event.code === 'AltLeft' || event.code === 'AltRight') {
+    event.preventDefault();
   }
 });
 
