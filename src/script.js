@@ -50,7 +50,7 @@ const sectionFour = document.createElement('section');
 sectionFour.className = 'forth-row';
 document.body.appendChild(sectionFour);
 
-const forthRow = ['⇑Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '🠥', '⇑'];
+const forthRow = ['⇑Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '↑', '⇑'];
 forthRow.forEach((el) => {
   const button = document.createElement('button');
   button.innerHTML = el;
@@ -61,7 +61,7 @@ const sectionFive = document.createElement('section');
 sectionFive.className = 'fifth-row';
 document.body.appendChild(sectionFive);
 
-const fifthRow = ['Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '🠤', '🠧', '🠦'];
+const fifthRow = ['Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '←', '↓', '→'];
 fifthRow.forEach((el) => {
   const button = document.createElement('button');
   button.innerHTML = el;
@@ -143,12 +143,12 @@ document.addEventListener('keyup', (event) => {
 });
 
 
-const lowerCase = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab⇄', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Del', 'CapsLock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", 'Enter', '⇑Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '🠥', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '🠤', '🠧', '🠦'];
-const shift = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', 'Backspace', 'Tab⇄', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '|', 'Del', 'CapsLock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':', '"', 'Enter', '⇑Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?', '🠥', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '🠤', '🠧', '🠦'];
-const capslock = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab⇄', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '\\', 'Del', 'CapsLock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':', '"', 'Enter', '⇑Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', '🠥', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '🠤', '🠧', '🠦'];
-const russianLowerCase = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab⇄', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Del', 'CapsLock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter', '⇑Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', '🠥', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '🠤', '🠧', '🠦'];
-const russianShift = ['Ё', '!', '"', '№', ';', '%', ':', '?', '*', '(', ')', '-', '+', 'Backspace', 'Tab⇄', 'Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ъ', '/', 'Del', 'CapsLock', 'Ф', 'Ы', 'В', 'А', 'П', 'Р', 'О', 'Л', 'Д', 'Ж', 'Э', 'Enter', '⇑Shift', 'Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', ',', '🠥', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '🠤', '🠧', '🠦'];
-const russianCapsLock = ['Ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab⇄', 'Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ъ', '\\', 'Del', 'CapsLock', 'Ф', 'Ы', 'В', 'А', 'П', 'Р', 'О', 'Л', 'Д', 'Ж', 'Э', 'Enter', '⇑Shift', 'Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', '.', '🠥', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '🠤', '🠧', '🠦'];
+const lowerCase = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab⇄', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Del', 'CapsLock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", 'Enter', '⇑Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '↑', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '←', '↓', '→'];
+const shift = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', 'Backspace', 'Tab⇄', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '|', 'Del', 'CapsLock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':', '"', 'Enter', '⇑Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?', '↑', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '←', '↓', '→'];
+const capslock = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab⇄', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '\\', 'Del', 'CapsLock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':', '"', 'Enter', '⇑Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', '↑', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '←', '↓', '🠦'];
+const russianLowerCase = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab⇄', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Del', 'CapsLock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter', '⇑Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', '↑', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '←', '↓', '→'];
+const russianShift = ['Ё', '!', '"', '№', ';', '%', ':', '?', '*', '(', ')', '-', '+', 'Backspace', 'Tab⇄', 'Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ъ', '/', 'Del', 'CapsLock', 'Ф', 'Ы', 'В', 'А', 'П', 'Р', 'О', 'Л', 'Д', 'Ж', 'Э', 'Enter', '⇑Shift', 'Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', ',', '↑', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '←', '↓', '→'];
+const russianCapsLock = ['Ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab⇄', 'Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ъ', '\\', 'Del', 'CapsLock', 'Ф', 'Ы', 'В', 'А', 'П', 'Р', 'О', 'Л', 'Д', 'Ж', 'Э', 'Enter', '⇑Shift', 'Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', '.', '↑', '⇑', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Win', 'Ctrl', '←', '↓', '→'];
 
 
 const buttons = document.querySelectorAll('button');
@@ -251,15 +251,45 @@ buttons.forEach((button) => {
         });
       }
     } else if (button.innerHTML === 'Tab⇄') {
-      textarea.value += '  ';
+      if (end === position) {
+        textarea.value = `${caption.slice(0, position)}   ${caption.slice(position + 1, caption.length)}`;
+        setCaretPosition(textarea, position + 3);
+      } else {
+        textarea.value = `${caption.slice(0, start)}  ${caption.slice(end, caption.length)}`;
+        setCaretPosition(textarea, position + 2);
+      }
     } else if (button.innerHTML === '&lt;') {
-      textarea.value += '<';
+      if (end === position) {
+        textarea.value = `${caption.slice(0, position)}<${caption.slice(position, caption.length)}`;
+        setCaretPosition(textarea, position + 1);
+      } else {
+        textarea.value = `${caption.slice(0, start)}<${caption.slice(end, caption.length)}`;
+        setCaretPosition(textarea, position + 1);
+      }
     } else if (button.innerHTML === '&gt;') {
-      textarea.value += '>';
+      if (end === position) {
+        textarea.value = `${caption.slice(0, position)}>${caption.slice(position, caption.length)}`;
+        setCaretPosition(textarea, position + 1);
+      } else {
+        textarea.value = `${caption.slice(0, start)}>${caption.slice(end, caption.length)}`;
+        setCaretPosition(textarea, position + 1);
+      }
     } else if (button.innerHTML === '&amp;') {
-      textarea.value += '&';
+      if (end === position) {
+        textarea.value = `${caption.slice(0, position)}&${caption.slice(position, caption.length)}`;
+        setCaretPosition(textarea, position + 1);
+      } else {
+        textarea.value = `${caption.slice(0, start)}&${caption.slice(end, caption.length)}`;
+        setCaretPosition(textarea, position + 1);
+      }
+    } else if (end === position) {
+      const b = button.innerHTML;
+      textarea.value = caption.slice(0, position) + b + caption.slice(position, caption.length);
+      setCaretPosition(textarea, position + 1);
     } else {
-      textarea.value += button.innerHTML;
+      const b = button.innerHTML;
+      textarea.value = caption.slice(0, start) + b + caption.slice(end, caption.length);
+      setCaretPosition(textarea, position + 1);
     }
   });
 });
@@ -279,8 +309,31 @@ document.addEventListener('keydown', (event) => {
     }
   }
 
+  function getPosition(el) {
+    return el.value.slice(0, el.selectionStart).length;
+  }
+  const position = getPosition(document.getElementById('inputWindow')); // get caret position;
+
+
+  function setCaretPosition(input, pos) { // set caret position
+    if (input.setSelectionRange) {
+      input.focus();
+      input.setSelectionRange(pos, pos);
+    }
+  }
+
+  const caption = textarea.value;
+  const start = inputWindow.selectionStart;
+  const end = inputWindow.selectionEnd;
+
   if (event.code === 'Tab') {
-    textarea.value += '  ';
+    if (end === position) {
+      textarea.value = `${caption.slice(0, position)}   ${caption.slice(position, caption.length)}`;
+      setCaretPosition(textarea, position + 3);
+    } else {
+      textarea.value = `${caption.slice(0, start)}   ${caption.slice(end, caption.length)}`;
+      setCaretPosition(textarea, position + 3);
+    }
   }
   if (event.code === 'AltLeft' || event.code === 'AltRight' || event.code === 'Tab') {
     event.preventDefault();
