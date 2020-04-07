@@ -176,7 +176,6 @@ buttons.forEach((button) => {
     }
     const position = getPosition(document.getElementById('inputWindow')); // get caret position;
 
-
     function setCaretPosition(input, pos) { // set caret position
       if (input.setSelectionRange) {
         input.focus();
@@ -199,11 +198,10 @@ buttons.forEach((button) => {
     } else if (button.innerHTML === 'Del') {
       if (end === position) {
         textarea.value = caption.slice(0, position) + caption.slice(position + 1, caption.length);
-        setCaretPosition(textarea, position);
       } else {
         textarea.value = caption.slice(0, start) + caption.slice(end, caption.length);
-        setCaretPosition(textarea, position);
       }
+      setCaretPosition(textarea, position);
     } else if (button.innerHTML === 'Enter') {
       if (end === position) {
         textarea.value = `${caption.slice(0, position)}\n${caption.slice(position, caption.length)}`;
@@ -215,11 +213,10 @@ buttons.forEach((button) => {
     } else if (button.innerHTML === ' ') {
       if (end === position) {
         textarea.value = `${caption.slice(0, position)} ${caption.slice(position, caption.length)}`;
-        setCaretPosition(textarea, position + 1);
       } else {
         textarea.value = `${caption.slice(0, start)} ${caption.slice(end, caption.length)}`;
-        setCaretPosition(textarea, position + 1);
       }
+      setCaretPosition(textarea, position + 1);
     } else if (button.innerHTML === 'Alt' || button.innerHTML === 'Ctrl' || button.innerHTML === 'Win') {
       textarea.value = `${caption.slice(0, position)}${caption.slice(position, caption.length)}`;
     } else if (button.innerHTML === '⇑Shift' || button.innerHTML === '⇑') {
@@ -253,44 +250,39 @@ buttons.forEach((button) => {
     } else if (button.innerHTML === 'Tab⇄') {
       if (end === position) {
         textarea.value = `${caption.slice(0, position)}   ${caption.slice(position + 1, caption.length)}`;
-        setCaretPosition(textarea, position + 3);
       } else {
         textarea.value = `${caption.slice(0, start)}  ${caption.slice(end, caption.length)}`;
-        setCaretPosition(textarea, position + 2);
       }
+      setCaretPosition(textarea, position + 2);
     } else if (button.innerHTML === '&lt;') {
       if (end === position) {
         textarea.value = `${caption.slice(0, position)}<${caption.slice(position, caption.length)}`;
-        setCaretPosition(textarea, position + 1);
       } else {
         textarea.value = `${caption.slice(0, start)}<${caption.slice(end, caption.length)}`;
-        setCaretPosition(textarea, position + 1);
       }
+      setCaretPosition(textarea, position + 1);
     } else if (button.innerHTML === '&gt;') {
       if (end === position) {
         textarea.value = `${caption.slice(0, position)}>${caption.slice(position, caption.length)}`;
-        setCaretPosition(textarea, position + 1);
       } else {
         textarea.value = `${caption.slice(0, start)}>${caption.slice(end, caption.length)}`;
-        setCaretPosition(textarea, position + 1);
       }
+      setCaretPosition(textarea, position + 1);
     } else if (button.innerHTML === '&amp;') {
       if (end === position) {
         textarea.value = `${caption.slice(0, position)}&${caption.slice(position, caption.length)}`;
-        setCaretPosition(textarea, position + 1);
       } else {
         textarea.value = `${caption.slice(0, start)}&${caption.slice(end, caption.length)}`;
-        setCaretPosition(textarea, position + 1);
       }
+      setCaretPosition(textarea, position + 1);
     } else if (end === position) {
       const b = button.innerHTML;
       textarea.value = caption.slice(0, position) + b + caption.slice(position, caption.length);
-      setCaretPosition(textarea, position + 1);
     } else {
       const b = button.innerHTML;
       textarea.value = caption.slice(0, start) + b + caption.slice(end, caption.length);
-      setCaretPosition(textarea, position + 1);
     }
+    setCaretPosition(textarea, position + 1);
   });
 });
 
@@ -329,11 +321,10 @@ document.addEventListener('keydown', (event) => {
   if (event.code === 'Tab') {
     if (end === position) {
       textarea.value = `${caption.slice(0, position)}   ${caption.slice(position, caption.length)}`;
-      setCaretPosition(textarea, position + 3);
     } else {
       textarea.value = `${caption.slice(0, start)}   ${caption.slice(end, caption.length)}`;
-      setCaretPosition(textarea, position + 3);
     }
+    setCaretPosition(textarea, position + 3);
   }
   if (event.code === 'AltLeft' || event.code === 'AltRight' || event.code === 'Tab') {
     event.preventDefault();
